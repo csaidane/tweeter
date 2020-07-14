@@ -1,0 +1,19 @@
+.navbar{
+  display: flex;
+  color: #FFFFFF;
+  height: 120px;
+  background-color: #4056A1;
+  padding: 1.5em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav-logo{
+  display: flex;
+  font-family: 'Bungee';
+  font-size: 45px;
+}
+
+#nav-prompt{
+  display: flex;
+}
