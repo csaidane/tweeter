@@ -20,6 +20,14 @@
   border-style: solid;
 }
 
+.tweet:hover{
+  box-shadow: 5px 10px grey;
+}
+
+.tweet:hover .usertag{
+  font-weight: 700;
+}
+
 .tweet-footer{
   display: flex;
   border-top: 2px solid black;
@@ -27,3 +35,4 @@
   justify-content: space-between;
   align-items: flex-start;
 }
+
