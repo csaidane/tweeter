@@ -45,6 +45,8 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+        <p class="error-length"><img class='error-icon' src="/images/icons-error.png">&nbsp;Your tweet is too long ! The maximum is 140 characters.&nbsp;<img class='error-icon' src="/images/icons-error.png"></p>
+        <p class="error-empty"><img class='error-icon' src="/images/icons-error.png">&nbsp;Your tweet is empty. Type something ! &nbsp;<img class='error-icon' src="/images/icons-error.png"></p>
         <form class="tweet-form" action="/tweets/" method="POST" >
           <label class="tweet-label" for="tweet-text"></label>
           <textarea class='text-area' placeholder="What are you humming about?" name="text" id="tweet-text"></textarea>
@@ -55,23 +57,6 @@
         </form>
       </section>
       <section id= tweets-container>
-      <article class='tweet'>
-      <header class='tweet-header'>
-        <div class="user-tag">
-          <img class="avatar" src="/images/profile-hex.png">
-          <p>William E. Henley</p>
-        </div>
-        <p class='usertag'>@MrsHenley</p>
-      </header>
-      <p>It matters not how strait the gate,
-        How charged with punishments the scroll,
-        I am the master of my fate:
-        I am the captain of my soul.</p>
-      <footer class='tweet-footer'>
-        <p>10 days ago</p>
-        <p>icon</p>
-      </footer>  
-      </article>
       </section>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 

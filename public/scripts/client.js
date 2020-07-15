@@ -13,7 +13,11 @@ $(document).ready(function() {
   return diffDays;
   }*/
 
-
+  const htmlEncode = function(str) {
+    return String(str).replace(/[^\w. ]/gi, function(c) {
+      return '&#' + c.charCodeAt(0) + ';';
+    });
+  };
 
   const createTweetElement = function(tweet) {
     const element = `
@@ -25,50 +29,57 @@ $(document).ready(function() {
         </div>
         <p class='usertag'>${tweet.user.handle}</p>
       </header>
-      <p>${tweet['content']['text']}</p>
+      <p>${htmlEncode(tweet['content']['text'])}</p>
       <footer class='tweet-footer'>
         <p>${String(new Date(tweet.created_at)).slice(3,15)}</p>
         <p>icon</p>
       </footer>
       </article>  
     `;
-    const $tweet = element;
+    const $tweet = $(element);
     return $tweet;
   };
   const renderTweets = function(tweets) {
     for (let i = 0; i < tweets.length; i++) {
       const theTweet = createTweetElement(tweets[i]);
-      $('#tweets-container').append(theTweet);
+      $('#tweets-container').prepend(theTweet);
     }
   };
-
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
+  
+  
+  $('.tweet-form').on('submit', function(event) {
+    event.preventDefault();
+    let data = $(this).serialize();
+    if (data.slice(5) !== null && data.slice(5) !== "" && data.slice(5).length < 140) {
+      $.ajax({
+        type: "POST",
+        url: '/tweets/',
+        data: data,
+      })
+        .then(()=> {
+          if (('.error-empty').length) {
+            $('.error-empty').slideUp('slow');
+          }
+          if (('.error-length').length) {
+            $('.error-length').slideUp('slow');
+          }
+          loadTweets();
+        });
+    } else if (data.slice(5).length > 140) {
+      $('.error-length').slideDown("slow");
+    } else if (data.slice(5) === null || data.slice(5) === "") {
+      $('.error-empty').slideDown("slow");
     }
-  ];
+  });
 
-  renderTweets(data);
+  const loadTweets = function() {
+    $('#tweets-container').empty();
+    $.get('/tweets/')
+      .then((tweetArray)=>{
+        renderTweets(tweetArray);
+      });
+  };
+
+  loadTweets();
  
-
-
 });

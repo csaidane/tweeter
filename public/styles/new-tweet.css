@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .tweet-button{
@@ -28,4 +29,26 @@
 
 .red{
   color: red;
+}
+
+.error-length{
+  color:red;
+  border-style: solid;
+  padding: 3px;
+  width: 75%;
+  text-align: center;
+  display: none;
+}
+.error-empty{
+  color:red;
+  border-style: solid;
+  padding: 3px;
+  width: 75%;
+  text-align: center;
+  display: none;
+}
+
+.error-icon{
+  width: 30px;
+  height: 30px;
 }
