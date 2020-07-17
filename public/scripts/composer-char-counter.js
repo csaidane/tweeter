@@ -5,7 +5,7 @@ $(document).ready(function() {
     let count = $(this).val().length + 1;
     //console.log(count);
     //console.log(this);
-    keysLeft = 140 - count;
+    let keysLeft = 140 - count;
     const $textArea = $(this);
     const $tweetForm = $textArea.parent();
     const $counter = $tweetForm.find('.counter');
