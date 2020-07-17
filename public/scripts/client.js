@@ -79,8 +79,8 @@ $(document).ready(function() {
           loadTweets();
         });
     } else if (data.slice(5).length > 140) {
-      console.log(data.slice(5))
-      console.log(data.slice(5).length)
+      console.log(data.slice(5));
+      console.log(data.slice(5).length);
       $('.error-length').slideDown("slow");
     } else if (data.slice(5) === null || data.slice(5) === "") {
       $('.error-empty').slideDown("slow");

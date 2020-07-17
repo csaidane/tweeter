@@ -23,5 +23,5 @@ I integrated a degree of responsive design into the project to make it usable on
 
 ## Final Product
 
-!["Screenshot of the main page at desktop size"]()
-!["Screenshot of the URL index]()
+!["Screenshot of the main page at desktop size"](https://github.com/csaidane/tweeter/blob/master/public/images/Desktop-size.png)
+!["Screenshot of the main page at tablet size"](https://github.com/csaidane/tweeter/blob/master/public/images/Tablet-size.png)
