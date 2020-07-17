@@ -15,6 +15,9 @@
   border: none;
   border-bottom: 2px solid black;
   width: 100%;
+  background: none;
+  resize: none;
+  
 }
 
 .tweet-form{
@@ -51,4 +54,8 @@
 .error-icon{
   width: 30px;
   height: 30px;
+}
+
+.container{
+  margin-top: 120px;
 }

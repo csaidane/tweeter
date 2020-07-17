@@ -1,0 +1,55 @@
+@media only screen and (max-width:768px){
+  body {
+    flex-direction: column;
+  }
+  .container{
+    margin-top: 0px;
+  }
+  .header-div{
+    padding: 0px;
+    width: 100%;
+  }
+  .navbar{
+  background-color: #eba800;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  }
+}
+
+@media only screen and (max-width:425px){
+
+  #nav-logo{
+    font-size: 25px;
+  }
+
+  #nav-prompt{
+    font-size: 17px;
+  }
+
+  .user-text{
+    font-size: 30px;
+  }
+
+  .userhandle{
+    font-size: 17px;
+  }
+
+  .nameUser{
+    font-size: 20px;
+  }
+
+  .user-tag{
+    flex-direction: column;
+  }
+
+  .avatar{
+    width: 45px;
+    height: 45px;
+  }
+
+
+
+
+
+
+
+}

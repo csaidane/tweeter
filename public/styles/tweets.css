@@ -24,7 +24,7 @@
   box-shadow: 5px 10px grey;
 }
 
-.tweet:hover .usertag{
+.tweet:hover .userhandle{
   font-weight: 700;
 }
 
@@ -34,5 +34,15 @@
   height: 50px;
   justify-content: space-between;
   align-items: flex-start;
+}
+
+
+.icon{
+  width: 15px;
+  height: 15px;
+}
+
+.user-text{
+  overflow-wrap: break-word;
 }
 
