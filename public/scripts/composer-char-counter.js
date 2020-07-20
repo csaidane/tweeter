@@ -1,6 +1,6 @@
 $(document).ready(function() {
   // --- our code goes here ---
-  $('#tweet-text').on('keypress', function(event) {
+  $('#tweet-text').on('input', function(event) {
     //console.log('keydown');
     let count = $(this).val().length + 1;
     //console.log(count);
