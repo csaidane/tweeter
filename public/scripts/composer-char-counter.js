@@ -2,7 +2,7 @@ $(document).ready(function() {
   // --- our code goes here ---
   $('#tweet-text').on('input', function(event) {
     //console.log('keydown');
-    let count = $(this).val().length + 1;
+    let count = $(this).val().length;
     //console.log(count);
     //console.log(this);
     let keysLeft = 140 - count;

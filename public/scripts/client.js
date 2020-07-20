@@ -76,8 +76,10 @@ $(document).ready(function() {
           if (('.error-length').length) {
             $('.error-length').slideUp('slow');
           }
+          $("#tweet-text").val("");
           loadTweets();
         });
+
     } else if (data.slice(5).length > 140) {
       console.log(data.slice(5));
       console.log(data.slice(5).length);
