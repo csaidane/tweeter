@@ -63,7 +63,7 @@ $(document).ready(function() {
   $('.tweet-form').on('submit', function(event) {
     event.preventDefault();
     let data = $(this).serialize();
-    if (data.slice(5) !== null && data.slice(5) !== "" && data.slice(5).length < 140) {
+    if (data.slice(5) !== null && data.slice(5) !== "" && data.slice(5).length <= 140) {
       $.ajax({
         type: "POST",
         url: '/tweets/',
@@ -77,6 +77,7 @@ $(document).ready(function() {
             $('.error-length').slideUp('slow');
           }
           $("#tweet-text").val("");
+          $('.counter').html(140);
           loadTweets();
         });
 

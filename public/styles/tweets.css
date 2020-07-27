@@ -28,6 +28,11 @@
   font-weight: 700;
 }
 
+.tweet:hover .icon{
+  display: inline-flex;
+}
+
+
 .tweet-footer{
   display: flex;
   border-top: 2px solid black;
@@ -38,6 +43,7 @@
 
 
 .icon{
+  display: none;
   width: 15px;
   height: 15px;
 }
